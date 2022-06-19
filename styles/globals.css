@@ -1,16 +1,91 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Tajawal", sans-serif;
+  color: #f1f1f1;
+  background: #000;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
-* {
-  box-sizing: border-box;
+.featuredSection {
+  background-image: url("../public/assets/FeaturedCoverImage.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.nav {
+  @apply fixed top-0 left-0 h-screen pl-[38px] pb-12 pt-[60px] w-[136px] overflow-hidden transition-all duration-300 ease-in-out hover:w-full hover:bg-gradient-to-r hover:from-[rgba(0,0,0,1)] hover:to-[rgba(0,0,0,0.2)] z-10;
+}
+
+.profileInfo {
+  @apply flex items-center mb-8 opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300;
+}
+
+.menuIcon {
+  @apply focus:bg-[#3b486d] rounded-md hover:font-bold flex items-center w-[316px] py-[18px];
+}
+
+.menuIconImageWrapper {
+  @apply mr-[22px] h-full rounded-full;
+}
+
+.menuIconImage {
+  @apply w-[31px] m-[26px] cursor-pointer;
+}
+
+.menuIconTitle {
+  @apply text-[36px] ml-4;
+}
+
+.extraOptionsWrapper {
+  @apply absolute bottom-12 text-[24px] leading-10 text-[#858688] opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300;
+}
+
+.extraOption {
+  @apply hover:text-[#f1f1f1] cursor-pointer;
+}
+
+.mainContent {
+  @apply -z-10 w-full absolute top-0 pl-[136px];
+}
+
+.featuredBlock {
+  @apply featuredSection z-20 pt-[180px] pb-[240px] pl-6;
+}
+
+.category{
+  @apply font-bold text-[24px] leading-[42px] text-[#858688]
+}
+
+.generalInfo{
+  @apply mt-6 text-[30px] leading-[42px]
+}
+
+.description{
+  @apply text-[32px] mt-1
+}
+
+.playMoreInfoButtonsWrapper{
+  @apply mt-9 text-[32px] font-bold
+}
+
+.playMoreInfoButton{
+  @apply rounded-full w-60 h-[72px]
+}
+
+.videoWrapper{
+  @apply absolute -z-10 top-0 w-full h-full overflow-hidden
+}
+
+.trendingNow{
+  @apply text-[32px] absolute -top-16
 }
